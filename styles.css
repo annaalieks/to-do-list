@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  src: url("fonts/BasisGrotesquePro-Regular.woff2") format("woff2"), url("./fonts/BasisGrotesquePro-Regular.woff") format("woff"), url("./fonts/BasisGrotesquePro-Regular.eot") format("embedded opentype"), url("./fonts/BasisGrotesquePro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  src: url("fonts/BasisGrotesquePro-Bold.woff2") format("woff2"), url("./fonts/BasisGrotesquePro-Bold.woff") format("woff"), url("./fonts/BasisGrotesquePro-Bold.eot") format("embedded opentype"), url("./fonts/BasisGrotesquePro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: fallback;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Basis Grotesque Pro", system-ui;
+  font-weight: 400;
+  color: #403832;
+  min-width: 450px;
+  background-image: url(img/colorful-list-collection-with-flat-design-1080x675.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.transparent-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: ' ';
+  background: rgba(238, 231, 208, .5);
+  z-index: -1;
+}
+
+.container {
+  background: #fff;
+  width: 50%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 50px 100px;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.15);
+  overflow: scroll;
+  text-align: center;
+}
+
+.create-task-block {
+  margin-bottom: 70px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  text-align: left;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.collection-item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5em;
+}
+
+.edit-item {
+  padding-left: 5px;
+}
+
+.delete-item {
+  padding-left: 15px;
+}
+
+button {
+  margin-top: 20px;
+  appearance: none;
+  background: #6fa8dc;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.15);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border: none;
+}
+
+input {
+  font-size: 16px;
+  padding: 5px;
+  width: 70%;
+}
+
+.filter-input {
+  margin-bottom: 20px;
+}
+
+.task-title {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .container {
+    width: 90%;
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+      width: 70%;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  ul {
+    width: 90%;
+  }
+}
