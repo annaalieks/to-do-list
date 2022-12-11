@@ -23,14 +23,14 @@ function editTask(event) {
 	if (iconContainter.classList.contains('edit-item')) {
 
 		// отримати індекс завдання, яке містить настиснуту іконку edit
-		let taskByIndex = tasksArray.indexOf(iconContainter.parentElement.parentElement);
+		let taskByIndex = tasksArray.indexOf(iconContainter.closest('li'));
 
 		// викликаємо діалогове вікно для редагування таски
 		const editedTask = prompt('Виправити назву завдання');
 
 		// вставляємо назву завдання з діалогового вікна замість старої назви завдання, яка міститься в елементі переліку, в якому знаходиться іконка edit
 		if (editedTask) {
-			iconContainter.parentElement.parentElement.firstChild.textContent = editedTask;
+			iconContainter.closest('li').firstChild.textContent = editedTask;
 		}
 
 		editTaskInLocalStorage(taskByIndex, editedTask)
@@ -186,10 +186,10 @@ function removeTask(event) {
 		if(confirm('Ви впевнені що хочете видали саме це завдання?')){			
 
 			// отримати індекс завдання, яке містить настиснутий хрестик
-			let taskByIndex = tasksArray.indexOf(iconContainter.parentElement.parentElement);
+			let taskByIndex = tasksArray.indexOf(iconContainter.closest('li'));
 
 			// видаляємо цей елемент переліку, в якому знаходиться хрестик
-			iconContainter.parentElement.parentElement.remove();
+			iconContainter.closest('li').remove();
 
 			// викликаємо функцію яка буде видаляти завдання з ЛокалСтораджа
 			removeTaskFromLocalStorage(taskByIndex);
